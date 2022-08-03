@@ -1,5 +1,7 @@
 import ReactDOM from 'react-dom';
-import App3 from './App3'
+import App from './App13'
+import {Provider} from 'react-redux'
+import store from './store'
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -7,6 +9,14 @@ import App3 from './App3'
 // );
 // ReactDOM.render(组件名称，要注入的元素)
 ReactDOM.render(
-  <App3 />,
+  <Provider store={store}>
+    <App/>
+  </Provider>,
   document.getElementById('root')
 )
+// setTimeout(()=>{
+//   ReactDOM.render(
+//     <input type="text" />,
+//     document.getElementById('root')
+//   )
+// },3000)
